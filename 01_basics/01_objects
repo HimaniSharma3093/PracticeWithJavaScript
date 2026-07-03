@@ -1,0 +1,45 @@
+//Singleton
+//Object.create is a way to create Singleton
+
+//Object Literals
+
+//Take a symbol and add it into object keys and print Interview Question
+const mySym =Symbol("key1")
+
+const JUser= {
+    name : "himani",
+    "fullname" : "Himani Sharma",
+    [mySym] :"mykey1",
+    age : 32,
+    location : "Noida",
+    email : "himanisharma@gmail.com",
+    isLoggedIn : false,
+    lastLoggedInDays : ["Monday", "Saturday"],
+
+}
+
+//object is created now ways to call / use object
+
+//console.log(JUser.email)
+//console.log(JUser["email"])// this way is more preferred because if we adde full name in above object see example there is no way to access it with dots
+//console.log(JUser["fullname"])
+//console.log(typeof JUser.mySym)
+//console.log(JUser[mySym])
+
+
+JUser.email="Himanisharma1234@gmail.com"
+//Object.freeze(JUser)
+JUser.email="Himanishar@chatgpt.com"
+//console.log(JUser)
+
+//function in Object
+JUser.greeting = function(){
+    console.log("This is a function")
+}
+
+JUser.greetingTwo = function(){
+    console.log(`This is a function , ${this.name}`)
+}
+
+console.log(JUser.greeting())
+console.log(JUser.greetingTwo())
