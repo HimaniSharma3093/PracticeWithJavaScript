@@ -1,0 +1,60 @@
+//Creating Singleton Object
+const tinder= new Object();
+//console.log(tinder)
+
+const tinder1={}
+//console.log(tinder1)
+
+tinder.id ="12"
+tinder.name="shivam"
+tinder.ageGroup="30"
+//console.log(tinder)
+
+//Nesting of Objects -> Object inside Object
+let userDetails= {
+    userName : "Himani",
+    userAge : 29,
+    userFullName : {
+        FirstName : "Himani",
+        LastName : "Sharma"
+    }
+}
+
+//console.log(userDetails.userName+userDetails.userAge+userDetails.userFullName.LastName)
+
+const obj1 = {"1":"a","2":"b"}
+const obj2 = {"3":"e","4":"f"}
+//In below line obj1 is target and obj2 is source and so on we can have many more objects as source
+//const obj3= Object.assign(obj1,obj2)
+//console.log(obj3)
+
+//By use of spread operator
+const obj4={...obj1, ...obj2};
+//console.log(obj4)
+
+//define objects inside array
+const UserArr=[
+    him = {
+        id: 1,
+        name: "abc"
+    },
+    him1= {
+        id: 2,
+        name: "def"
+    },
+    him2={
+        id: 3,
+        name: "ghi"
+    }
+]
+
+//console.log(UserArr[0].id)
+
+//some important methods to get keys, value , entity
+
+console.log(Object.keys(tinder))
+console.log(Object.values(tinder))
+console.log(Object.entries(tinder))
+
+
+console.log(Object.hasOwnProperty('isLoggedIn'))
